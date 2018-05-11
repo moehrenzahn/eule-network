@@ -1,4 +1,4 @@
-=== Eule for Wordpress ===
+=== Die Eule Netzwerk-Plugin für Wordpress ===
 Contributors: maxmelzer
 Tags: church, rss, news
 Requires at least: 4.9

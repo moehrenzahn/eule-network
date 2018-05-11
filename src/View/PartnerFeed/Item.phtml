@@ -1,0 +1,22 @@
+<?php
+/**
+ * @var SimplePie_Item $data
+ * @var \EuleNetwork\Block\PartnerFeed $block
+ */
+?>
+
+<a href="<?php echo $data->get_permalink(); ?>"
+   title="<?php echo $data->get_title(); ?>"
+   class='feed-item'>
+    <h4 class="article-preview-title"><?php echo $data->get_title(); ?></h4>
+    <p class="article-preview-excerpt">
+        <?php echo strip_tags($data->get_description()); ?>
+    </p>
+    <?php if ($author = $data->get_author()) : ?>
+        <p class="article-preview-byline">
+            <?php echo $author->get_name(); ?>
+            am
+            <?php echo date_i18n('j. M',$data->get_date('U')); ?>
+        </p>
+    <?php endif; ?>
+</a>

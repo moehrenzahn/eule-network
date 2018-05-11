@@ -1,0 +1,8 @@
+<?php
+/** @var \EuleNetwork\WidgetBlock $block */
+echo $block->getBeforeWidget();
+echo $block->getBeforeTitle();
+echo 'Die Eule';
+echo $block->getAfterTitle();
+$block->renderPartial('error');
+echo $block->getAfterWidget();

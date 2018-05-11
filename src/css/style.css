@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css?family=Lora:400|Source+Sans+Pro:300,400,400i');
+
+.eule-network-plugin a {
+  text-decoration: none !important;
+  border: none !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
+  transition: color .3s;
+}
+.eule-network-plugin a:not(.feed-item):hover {
+  color: #c4a757 !important;
+}
+
+.eule-network-plugin a:hover {
+  opacity: 1 !important;
+}
+.eule-network-plugin a::after, .eule-network-plugin a::before {
+  display: none;
+}
+
+.eule-network-plugin .eule-icon {
+  display: block;
+  width: 55px;
+  margin: 5px auto;
+}
+
+.eule-network-plugin {
+  padding: 3px;
+  line-height: 24px;
+  text-align: left !important;
+  font-size: 16px !important;
+  font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+}
+.eule-network-plugin h1,
+.eule-network-plugin h2,
+.eule-network-plugin h3,
+.eule-network-plugin h4 {
+  font-family: "Lora", Cambria, Times New Roman, Times, serif;
+}
+
+.eule-network-plugin p {
+  opacity: .9;
+  margin-top: 5px !important;
+  margin-bottom: 5px !important;
+  line-height: 20px
+
+}
+
+.eule-network-plugin .article-preview-title {
+  font-weight: normal;
+  margin: 0;
+  line-height: 1.1em;
+  font-size: 22px;
+  transition: color .3s;
+}
+
+.eule-network-plugin .article-preview-byline{
+  font-weight: 700;
+  font-size: .9em;
+  opacity: .7;
+}
+
+.eule-network-plugin .feed-item {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.eule-network-plugin .feed-item:hover .article-preview-title {
+  color: #c4a757;
+}
+
+.eule-network-plugin .smallcaps-heading {
+  display: block;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 0.08em;
+  font-size: 15px;
+  margin-bottom: 15px;
+  text-align: center;
+  hyphens: none !important;
+  -webkit-hyphens: none !important;
+}

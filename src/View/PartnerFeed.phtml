@@ -1,0 +1,11 @@
+<?php
+/** @var $block \EuleNetwork\Block\PartnerFeed */
+$feed = $block->getFeed();
+?>
+<div class="eule-network-plugin">
+    <img class="eule-icon" src="<?php echo $block->getEuleIconUrl(); ?>" />
+    <a class="smallcaps-heading" href="<?php echo $feed->getPageUrl(); ?>"><?php echo $feed->getPageTitle(); ?> – <?php echo $feed->getPageDescription(); ?></a>
+    <?php foreach ($feed->getItems() as $item) : ?>
+        <?php $block->renderPartial('PartnerFeed/Item', null, $item); ?>
+    <?php endforeach; ?>
+</div>

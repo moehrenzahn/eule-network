@@ -11,7 +11,7 @@ class Autoloader
      * @param string $classname
      * @return bool
      */
-    public static function load(string $classname)
+    public static function load($classname)
     {
         $parts = explode('\\', $classname);
 

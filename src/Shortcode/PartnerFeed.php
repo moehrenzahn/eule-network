@@ -7,7 +7,6 @@ use EuleNetwork\ConfigAccessor;
 use EuleNetwork\Loader;
 use EuleNetwork\Model\Storage\Transient;
 use EuleNetwork\Plugin;
-use EuleNetwork\WidgetBlock;
 
 /**
  * Class PartnerFeed

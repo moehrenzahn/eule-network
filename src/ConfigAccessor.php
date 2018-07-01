@@ -10,9 +10,8 @@ class ConfigAccessor
 {
     const CONFIG_PREFIX = 'eule_network_';
 
-    const KEY_LIGHT_LOGO = self::CONFIG_PREFIX.'light_logo';
-
-
+    const KEY_LIGHT_LOGO = self::CONFIG_PREFIX . 'light_logo';
+    
     const DEFAULTS = [
         self::KEY_LIGHT_LOGO => false,
     ];

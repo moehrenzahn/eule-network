@@ -107,6 +107,6 @@ class Plugin
 
     private function initShortcode()
     {
-        new \EuleNetwork\ShortCode\PartnerFeed($this->transient, $this->loader, $this->config);
+        new \EuleNetwork\Shortcode\PartnerFeed($this->transient, $this->loader, $this->config);
     }
 }

@@ -4,6 +4,7 @@ namespace EuleNetwork\Block;
 
 use \EuleNetwork\Block;
 use EuleNetwork\ConfigAccessor;
+use EuleNetwork\Plugin;
 
 /**
  * Class PartnerFeed
@@ -54,9 +55,9 @@ class PartnerFeed extends Block
     public function getEuleIconUrl()
     {
         if ($this->config->useLightLogo()) {
-            return plugins_url() . '/eule-network/src/img/logo_white_medium.png';
+            return Plugin::getSrcUrl() . 'img/logo_white_medium.png';
         } else {
-            return plugins_url() . '/eule-network/src/img/logo_gray_medium.png';
+            return Plugin::getSrcUrl() . 'img/logo_gray_medium.png';
         }
     }
 }

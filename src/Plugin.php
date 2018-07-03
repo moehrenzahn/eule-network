@@ -92,6 +92,22 @@ class Plugin
         return $configPage;
     }
 
+    /**
+     * @return string
+     */
+    public static function getSrcDir()
+    {
+        return plugin_dir_path(__FILE__);
+    }
+
+    /**
+     * @return string
+     */
+    public static function getSrcUrl()
+    {
+        return plugin_dir_url(__FILE__);
+    }
+
     private function initCss()
     {
         wp_enqueue_style(

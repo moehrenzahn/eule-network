@@ -5,11 +5,14 @@ namespace EuleNetwork;
 use EuleNetwork\Config\Section;
 use EuleNetwork\Config\Setting;
 use EuleNetwork\Config\Settings;
+use EuleNetwork\Model\Action\RefreshFeed;
 use EuleNetwork\Model\Storage\Transient;
 
 class Plugin
 {
     const WP_TEXTDOMAIN = 'eule-network';
+
+    const RELOAD_POSTS_ACTION_ID = 'eule_network_refresh';
 
     const FEED_URL = 'https://eulemagazin.de/rss';
 
@@ -65,17 +68,24 @@ class Plugin
      */
     public function initConfigPage()
     {
+        new RefreshFeed($this->loader);
         $generalSettings = [
             new Setting(
                 ConfigAccessor::KEY_LIGHT_LOGO,
-                'Helles Logo',
-                'Verwende eine helle Variante des Eule-Logos. Verwende diese Einstellung, wenn dein Widget-Bereich einen dunklen Hintergrund hat.',
+                __('Helles Logo', Plugin::WP_TEXTDOMAIN),
+                __('Verwende eine helle Variante des Eule-Logos. Verwende diese Einstellung, wenn dein Widget-Bereich einen dunklen Hintergrund hat.', Plugin::WP_TEXTDOMAIN),
                 new \EuleNetwork\Block\Setting('/View/config/setting/boolean.phtml')
+            ),
+            new Setting(
+                self::RELOAD_POSTS_ACTION_ID,
+                __('Cache leeren', Plugin::WP_TEXTDOMAIN),
+                __('Posts manuell nachladen. Geschieht automatisch alle 12 Stunden.', Plugin::WP_TEXTDOMAIN),
+                new \EuleNetwork\Block\Setting('/View/config/setting/button.phtml')
             ),
             new Setting(
                 'info',
                 '',
-                'Um das "Die Eule" Plugin zu verwenden, verwende den Shortcode "[eule]" oder aktiviere das Widget "Die Eule".',
+                __('Um das "Die Eule" Plugin zu verwenden, verwende den Shortcode "[eule]" oder aktiviere das Widget "Die Eule".', Plugin::WP_TEXTDOMAIN),
                 new \EuleNetwork\Block\Setting('/View/config/setting/info.phtml')
             ),
         ];
@@ -87,7 +97,7 @@ class Plugin
                 new \EuleNetwork\Block\Section('/View/config/section.phtml')
             ),
         ];
-        $configPage = new Settings(__('Die Eule', Plugin::WP_TEXTDOMAIN), $sections);
+        $configPage = new Settings(__('Die Eule vernetzt', Plugin::WP_TEXTDOMAIN), $sections);
 
         return $configPage;
     }

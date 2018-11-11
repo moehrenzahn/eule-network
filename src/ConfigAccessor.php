@@ -50,7 +50,7 @@ class ConfigAccessor
      */
     private function getDefaultValue($key)
     {
-        if (isset(self::DEFAULTS[$key])) {
+        if (self::DEFAULTS[$key] !== null) {
             $value = self::DEFAULTS[$key];
         } else {
             throw new \Exception('No default set for '.$key);

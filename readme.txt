@@ -3,7 +3,7 @@ Contributors: maxmelzer
 Tags: church, rss, news
 Requires at least: 4.9
 Tested up to: 4.9.7
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 Requires PHP: 5.6
 Text Domain: eule-network
 Domain Path: /languages
@@ -38,3 +38,5 @@ This section explains the plugin installation
 
 = 1.0.0 =
 * Initial release.
+= 1.0.1 =
+* Fix potential crashing bug on install.

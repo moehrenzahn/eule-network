@@ -3,7 +3,7 @@
 Plugin Name:  Die Eule Netzwerk-Plugin
 Plugin URI:   https://eulemagazin.de/
 Description:  Zeige die neuesten Artikel von eulemagazin.de auf deiner Seite an.
-Version:      1.0.0
+Version:      1.0.1
 Author:       Max Melzer
 Author URI:   http://moehrenzahn.de/en/about
 License:      GPLv2 or later
